@@ -1,6 +1,7 @@
 import { Component, OnChanges, OnInit } from '@angular/core';
 import { UiStyleToggleService } from '../services/ui-style-toggle.service';
 import { TranslocoService } from '@ngneat/transloco';
+import { faGlobeAmericas } from '@fortawesome/free-solid-svg-icons';
 declare var $: any;
 
 @Component({
@@ -9,6 +10,8 @@ declare var $: any;
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit,OnChanges {
+
+  faGlobeAmericas = faGlobeAmericas;
 
   constructor(private uiStyleToggleService: UiStyleToggleService,private transloco: TranslocoService) { }
 

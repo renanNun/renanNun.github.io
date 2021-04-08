@@ -9,12 +9,16 @@ import { ErrorsComponent } from './errors/errors.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TranslocoRootModule } from './transloco/transloco-root.module';
 import { NotFoundComponent } from './errors/not-found/not-found.component';
+import { HeaderComponent } from './header/header.component';
+import { TranslocoService } from '@ngneat/transloco';
+import { browserLocaleFactory, LocaleConfig } from './locale-lang-config';
 
 @NgModule({
   declarations: [
     AppComponent,
     ErrorsComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +28,14 @@ import { NotFoundComponent } from './errors/not-found/not-found.component';
     HttpClientModule,
     TranslocoRootModule
   ],
-  providers: [],
+  providers: [{
+    provide: LocaleConfig,
+    useFactory: browserLocaleFactory
+  }],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor(transloco: TranslocoService, localeConf: LocaleConfig) {
+    transloco.setActiveLang(localeConf.language);
+  }
+}
