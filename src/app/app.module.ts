@@ -12,13 +12,17 @@ import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { HeaderComponent } from './header/header.component';
 import { TranslocoService } from '@ngneat/transloco';
 import { browserLocaleFactory, LocaleConfig } from './locale-lang-config';
+import { PagesComponent } from './pages/pages.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ErrorsComponent,
     NotFoundComponent,
-    HeaderComponent
+    HeaderComponent,
+    PagesComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
