@@ -1,1 +1,16 @@
-<p>not-found works!</p>
+<div *transloco="let t">
+    <div class="container">
+        <div class="main">
+            <div class="d-flex flex-column align-items-center">
+                <div class="">
+                    <i class="fa fa-cog fa-5x fa-spin"></i>
+                    <h1 class="mt-2 header-error">{{ t('errors.title')}}</h1>
+                    <p class="text-error">{{ t('errors.description')}}</p>
+                    <div>
+                        <button (click)="goToHome()" type="button" class="btn btn-outline-orange-soda">{{ t('navbar.home')}}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>
