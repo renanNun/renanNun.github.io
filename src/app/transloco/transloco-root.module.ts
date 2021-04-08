@@ -37,4 +37,6 @@ export class TranslocoHttpLoader implements TranslocoLoader {
     { provide: TRANSLOCO_LOADER, useClass: TranslocoHttpLoader }
   ]
 })
-export class TranslocoRootModule {}
+export class TranslocoRootModule {
+  
+}

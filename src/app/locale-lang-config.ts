@@ -9,7 +9,9 @@ export class LocaleConfig {
   export const SUPPORTED_LANGUAGES = [
     { language: "pt", locales: ["pt-BR", "pt-PT"] },
     { language: "en", locales: ["en-US", "en-GB"] },
-    { language: "es", locales: ["es-AR","es-ES"]}
+    { language: "es", locales: ["es-AR","es-ES"]},
+    { language: "fr", locales: ["fr-FR"]},
+    { language: "de", locales: ["de-DE"]}
   ];
   
   // This factory is what will create the LocaleConfig to be used when
