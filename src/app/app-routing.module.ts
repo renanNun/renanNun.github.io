@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from './errors/not-found/not-found.component';
+import { HomeComponent } from './pages/home/home.component';
 import { TranslocoRootModule } from './transloco/transloco-root.module';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home',pathMatch: 'full'},
-  {path: 'home',component: NotFoundComponent},
+  {path: 'home',component: HomeComponent},
   {path: '**', component: NotFoundComponent}
 ];
 
