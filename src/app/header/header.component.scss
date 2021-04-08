@@ -1,0 +1,150 @@
+@import "./../../scss/variables";
+@import "./node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
+
+li a{
+  text-decoration: none!important;
+  font-size: larger;
+  font-weight: 600;
+  letter-spacing: 3px;
+  font-family: $economica;
+  color: $black;
+}
+
+.effect{
+  padding: 5px;
+  overflow: hidden;
+
+  &:before, &:after{
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: $black;
+  }
+
+  &:before{
+    bottom: 0;
+    transform: translateX(-100%);
+  }
+  &:after {
+    top: 0;
+    transform:  translateX(100%);
+  }
+  &:hover:before, &:hover:after {
+    transform:  translateX(0);
+  }
+}
+
+/*Mudança do Icon de Menu*/
+
+.dark-mode-menu{
+  a{
+    color: $white!important;
+  }
+}
+
+.dark-mode-hamburguer{
+  background-color: $white!important;
+
+  &:after{
+    background-color: $white!important;
+  }
+
+  &:before{
+    background-color: $white!important;
+  }
+
+}
+
+
+/*Ícone de mudança do modo noturno*/
+
+.icon-switcher {
+    width: 50px;
+    height: 24px;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    > .control {
+      display: none;
+      & + .peg {
+        display: inline-block;
+        position: absolute;
+        z-index: 4;
+        top: 0;
+        left: 0;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        border: 1px solid $spanish-gray;
+        transition: 0.2s;
+        background-color: $white;
+      }
+      & ~ .bg {
+        border-radius: 12px;
+        width: 100%;
+        height: 100%;
+        border: 1px solid $spanish-gray;
+        background-color: $white;
+        position: relative;
+        z-index: 0;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        &::before {
+          content: '';
+          position: absolute;
+          left: calc(100% - 20px);
+          display: inline-block;
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          background-color: $text-body;
+          transition: 0.2s ease-out;
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          left: calc(100% - 14px);
+          top: -1px;
+          display: inline-block;
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          background-color: $white;
+          transition: 0.2s ease-out; 
+        }
+      }
+      &:checked {
+        & + .peg {
+          left: calc(100% - 24px);
+        }
+        & ~ .bg {
+          background-color: $text-body;
+          &::before {
+            left: 6px;
+            width: 14px;
+            height: 14px;
+            background-color: $sun;
+            filter: blur(4px);
+          }
+          &::after {
+            background-color: $sun;
+            width: 12px;
+            height: 12px;
+            top: initial;
+            left: 8px;
+          }
+        }
+      }
+    }
+  }
+
+.world-icon{
+  width: 50px;
+  height: 36px;
+  position: relative;
+
+  .fa{
+    font-size: 1.8rem;
+  }
+}

@@ -1,0 +1,40 @@
+<div *transloco="let t">
+<div class="pos-f-t" id="navbar">
+  <div class="collapse" id="menu-principal">
+    <div class="p-4">
+      <ul id="menu" class="list-unstyled">
+        <li class="w-25"><a href="">{{ t('navbar.home') }}</a></li>
+        <li class="w-25"><a href="">{{ t('navbar.projects') }}</a></li>
+        <li class="w-25"><a href="">{{ t('navbar.about') }}</a></li>
+      </ul>
+    </div>
+  </div>
+  <nav class="navbar ">
+    <button (click)="openHamburger()" class="hamburger hamburger--spring " aria-label="Menu" type="button" data-toggle="collapse" data-target="#menu-principal" aria-controls="menu-principal" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+    <div class="world-icon ml-auto dropdown dropleft show">
+      <a role="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fa fa-globe"></i>
+      </a>
+    
+      <div class="dropdown-menu" aria-labelledby="languageDropdown">
+        <h6 class="dropdown-header">{{ t('navbar.dropdown-header') }}</h6>
+        <a class="dropdown-item"(click)="setActiveLang('pt-BR')">Portuguese</a>
+        <a class="dropdown-item"(click)="setActiveLang('es')">Spanish</a>
+        <a class="dropdown-item"(click)="setActiveLang('en')">English</a>
+        <a class="dropdown-item"(click)="setActiveLang('fr')">French</a>
+        <a class="dropdown-item"(click)="setActiveLang('de')">German</a>
+      </div>
+    </div>
+    <div class="icon">
+      <label class="icon-switcher" data-js-icon-switcher="data-js-icon-switcher">
+          <input id="night-mode" class="control" type="checkbox" (click)="ngOnChanges()"/>
+          <div class="peg"></div>
+          <div class="bg"></div>
+      </label>
+    </div>
+  </nav>
+</div>
