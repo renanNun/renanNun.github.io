@@ -1,0 +1,12 @@
+{    
+    "navbar": {
+        "home": "Startseite",
+        "projects": "Projekte",
+        "about": "Über",
+        "dropdown-header": "Choose your language"
+    },
+    "errors":{
+        "title": "404 Fehler",
+        "description": "Seite nicht gefunden"
+    }
+}
