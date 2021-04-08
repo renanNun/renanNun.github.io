@@ -32,8 +32,7 @@
             ],
             "styles": [
               "src/scss/styles.scss",
-              "./node_modules/bootstrap/scss/bootstrap.scss",
-              "./node_modules/font-awesome/scss/font-awesome.scss"
+              "./node_modules/bootstrap/scss/bootstrap.scss"
             ],
             "scripts": [
               "./node_modules/jquery/dist/jquery.js",
@@ -59,13 +58,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
+                  "maximumWarning": "700kb",
                   "maximumError": "1mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "100kb",
+                  "maximumError": "700kb"
                 }
               ]
             }
@@ -101,8 +100,7 @@
             ],
             "styles": [
               "src/scss/styles.scss",
-              "./node_modules/bootstrap/scss/bootstrap.scss",
-              "./node_modules/font-awesome/scss/font-awesome.scss"
+              "./node_modules/bootstrap/scss/bootstrap.scss"
             ],
             "scripts": [
               "./node_modules/jquery/dist/jquery.js",

@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ErrorsComponent } from './errors/errors.component';
+import { HttpClientModule } from '@angular/common/http';
+import { TranslocoRootModule } from './transloco/transloco-root.module';
 import { NotFoundComponent } from './errors/not-found/not-found.component';
 
 @NgModule({
@@ -18,7 +20,9 @@ import { NotFoundComponent } from './errors/not-found/not-found.component';
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule,
+    TranslocoRootModule
   ],
   providers: [],
   bootstrap: [AppComponent]
