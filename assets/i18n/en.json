@@ -1,3 +1,12 @@
 {
-    "teste": "Esse é um Teste"
+    "navbar": {
+        "home": "Home",
+        "projects": "Projects",
+        "about": "About",
+        "dropdown-header": "Choose your language"
+    },
+    "errors":{
+        "title": "Erro 404",
+        "description": "Page not found"
+    }
 }
